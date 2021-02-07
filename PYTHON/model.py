@@ -22,7 +22,7 @@
 
 from sqlite3 import Cursor
 
-__email__ = "oscar07112009@hotmail.com"
+__email__ = "oscarmtzp93@gmail.com"
 __license__ = "GPL"
 __maintainer__ = "Oscar Martinez"
 __status__ = "Developing"
