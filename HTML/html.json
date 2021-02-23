@@ -1,0 +1,33 @@
+{
+	"Format_HTML": {
+		"prefix": "HTML5_format",
+		"body": [
+			"<!DOCTYPE html>"
+			"<html lang='en'>"
+			""
+				"	<head>"
+					"		<meta charset='utf-8'>"
+					"		<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
+					"		<meta description='Description in the search engine'>"
+					"		<meta name='keywords' content='keyword_1, keyword_2'>"
+					"		<meta name='author', content='Oscar Martinez, oscarmtzp93@gmail.com'>"
+					"		<title>Title!</title>"
+					"		<link rel='shortcut icon' href='img/favicon.ico'>"
+					"		<link rel='stylesheet' href='css/normalize.css'> <!-- npm install normalize.css -->"
+					"		<link rel='stylesheet' href='css/style.css'>"
+				"	</head>"
+				""
+				"	<body>"
+					"		<header>Header</header>"
+					"		<nav>Nav</nav>"
+					"		<section id=main_section_wrap>"
+					"			<aside>Aside</aside>"
+					"			<section>Section</section>"
+					"		</section>"
+					"		<footer>Footer</footer>"
+				"	</body>"
+			"</html>"
+		],
+		"description": "Create the format of an html page"
+	}
+}
