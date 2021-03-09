@@ -63,7 +63,7 @@ class ControllerName(QMainWindow):
         icon = QIcon("Imgs/icon.png")
         self.setWindowIcon(icon)
 
-        self.setWindowTitle(QCoreApplication.translate("Name", App._text['names'], None))
+        self.setWindowTitle(QCoreApplication.translate("Name", App._text['name'], None))
 
     def __listenEvents(self):
         """Puts all the events of the form to listen."""
