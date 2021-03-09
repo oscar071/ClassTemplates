@@ -91,8 +91,8 @@ class ControllerName(QMainWindow):
         """It requests the user's confirmation to close the system."""
         box = QMessageBox(self)
         box.setIcon(QMessageBox.Question)
-        box.setWindowTitle(App._text['close_name'])
-        box.setText(App._text['msg_close_name'])
+        box.setWindowTitle(App._text['close_window'])
+        box.setText(App._text['msg_close_window'])
         box.setStandardButtons(QMessageBox.Yes|QMessageBox.No)
         btn_y = box.button(QMessageBox.Yes)
         btn_y.setText(App._text['yes'])
