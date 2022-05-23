@@ -1,26 +1,39 @@
 # ________________________________Instructions_________________________________
 """
-01.- Replace Model with ClassName
-02.- Delete or replace Cursor with ParentClass
-03.- Delete or replace const with a class_const
-04.- Delete or replace var with a class_var
-05.- Delete or replace method_class with a method_class
-06.- Delete or replace value with value_principal
-07.- Delete or replace int with the main data type (Complete words)
-08.- Delete or replace secondary with val_secondary
-09.- Delete or replace float with secondary data type
-10.- Delete or replace private_method with method_name
-11.- Delete or replace public_method with method_name
-12.- Replace jan/01/2021 with date
-13.- Check all the class and delete this instructions
+                    VARIABLES
+DAY:                        $DAY$, example -> 01
+MONTH:                      $MONTH$, example -> jan
+YEAR:                       $YEAR$, example -> 2021
+CREDITS:                    $CREDITS$, example -> AvantZen
+NAME_FILE:                  $NAME_FILE$, example -> worker
+NAME_CLASS:                 $NAME_CLASS$, example -> Worker
+PACKAGE_PARENT_CLASS:       $PACKAGE_PARENT_CLASS$, example -> sqlite3   
+NAME_PARENT_CLASS:          $NAME_PARENT_CLASS$, example -> Cursor
+CONST_CLASS:                $CONST_CLASS$, example -> pi
+VALUE_CONST_CLASS           $VALUE_CONST_CLASS$, example = 3.1416 
+VAR_CLASS:                  $VAR_CLASS$, example -> READ
+VALUE_VAR_CLASS:            $VALUE_VAR_CLASS$, example -> 1
+TYPE_VAR_CLASS:             $TYPE_VAR_CLASS$, example -> int
+METHOD_CLASS:               $METHOD_CLASS$, example -> random
+VALUE_PRINCIPAL:            $VALUE_PRINCIPAL$, example -> val
+TYPE_VALUE_PRINCIPAL:       $TYPE_VALUE_PRINCIPAL$, example -> int
+VALUE_SECONDARY:            $VALUE_SECONDARY$, example -> name
+TYPE_VALUE_SECONDARY:       $TYPE_VALUE_SECONDARY$, example -> str
+VALUE_SECONDARY_DEFAULT:    $VALUE_SECONDARY_DEFAULT$, example -> 'val'
+METHOD_PRIVATE:             $METHOD_PRIVATE$, example -> delete_all
+TYPE_METHOD_PRIVATE_RETURN: $TYPE_METHOD_PRIVATE_RETURN$, example -> bool
+METHOD_PUBLIC:              $METHOD_PUBLIC$, example -> save_all
+TYPE_METHOD_PUBLIC_RETURN:  $TYPE_METHOD_PUBLIC_RETURN$, example -> bool
 
+                    PROCESS:
+01.- Check all the class and delete this instructions
 """
 # ________________________________Instructions_________________________________
 
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-from sqlite3 import Cursor
+from $PACKAGE_PARENT_CLASS$ import $NAME_PARENT_CLASS$
 
 __email__ = "oscarmtzp93@gmail.com"
 __license__ = "GPL"
@@ -29,30 +42,29 @@ __status__ = "Developing"
 
 __version__ = "1.0"
 
-__date__ = "jan/01/2021"
+__date__ = "$MONTH$/$DAY$/$YEAR$"
 
 __author__ = "Oscar Martinez"
 
-__credits__ = "AvantZen"
+__credits__ = "$CREDITS$"
 
 
-class Model(Cursor):
+class $NAME_CLASS$($NAME_PARENT_CLASS$):
     """Class description (DocString)"""
 
     # ____________________________Class attributes_____________________________
 
-    _const = True
-    var = 2
+    _$CONST_CLASS$ = $VALUE_CONST_CLASS$
+    $VAR_CLASS$ = $VALUE_VAR_CLASS$
 
     # ____________________________Class attributes_____________________________
 
     # ______________________________Class methods______________________________
 
     @classmethod
-    def method_class(cls, var: bool) -> bool:
+    def $METHOD_CLASS$(cls) -> $TYPE_VAR_CLASS$:
         """Method description  (DocString)"""
-        Model.var = var
-        return Model.var
+        return $NAME_CLASS$.$VAR_CLASS$
 
     # ______________________________Class methods______________________________
 
@@ -60,26 +72,29 @@ class Model(Cursor):
 
     # _____________________________Generic methods_____________________________
 
-    def __init__(self, value: int, secondary: float = 0):
+    def __init__(self, $VALUE_PRINCIPAL$: $TYPE_VALUE_PRINCIPAL$, $VALUE_SECONDARY$: $TYPE_VALUE_SECONDARY$ = $VALUE_SECONDARY_DEFAULT$):
         """Method description  (DocString)"""
-        super(Cursor, self).__init__()
-        self.__value = value
-        self.__secondary = secondary
+        super($NAME_PARENT_CLASS$, self).__init__()
+        self.__$VALUE_PRINCIPAL$ = None
+        self.__$VALUE_SECONDARY$ = None
+        
+        self.$VALUE_PRINCIPAL$ = $VALUE_PRINCIPAL$
+        self.$VALUE_SECONDARY$ = $VALUE_SECONDARY$
 
     def __len__(self):
         """Method description  (DocString)
-        return len(self.__secondary)"""
-        return len(self.__secondary)
+        return len(self.$VALUE_SECONDARY$)"""
+        return len(self.$VALUE_SECONDARY$)
 
     def __str__(self):
         """Method description  (DocString)
-        return str(self.__secondary)"""
-        return str(self.__secondary)
+        return str(self.$VALUE_SECONDARY$)"""
+        return str(self.$VALUE_SECONDARY$)
 
     def __del__(self):
         """Method description  (DocString)
-        del self.__secondary"""
-        del self.__secondary
+        del self.$VALUE_SECONDARY$"""
+        del self.$VALUE_SECONDARY$
 
     # _____________________________Generic methods_____________________________
 
@@ -87,19 +102,19 @@ class Model(Cursor):
 
     def __add__(self, other):
         """Method description (DocString)"""
-        return self.__value + other.__value
+        return self.$VALUE_PRINCIPAL$ + other.$VALUE_PRINCIPAL$
 
     def __sub__(self, other):
         """Method description (DocString)"""
-        return self.__value - other.__value
+        return self.$VALUE_PRINCIPAL$ - other.$VALUE_PRINCIPAL$
 
     def __mul__(self, other):
         """Method description (DocString)"""
-        return self.__value * other.__value
+        return self.$VALUE_PRINCIPAL$ * other.$VALUE_PRINCIPAL$
 
     def __truediv__(self, other):
         """Method description (DocString)"""
-        return self.__value / other.__value
+        return self.$VALUE_PRINCIPAL$ / other.$VALUE_PRINCIPAL$
 
     # ____________________________Arithmetic methods___________________________
 
@@ -107,18 +122,18 @@ class Model(Cursor):
 
     def __lt__(self, other):
         """Method description (DocString)
-        return self.__value < other.__value"""
-        return self.__value < other.__value
+        return self.$VALUE_PRINCIPAL$ < other.$VALUE_PRINCIPAL$"""
+        return self.$VALUE_PRINCIPAL$ < other.$VALUE_PRINCIPAL$
 
     def __le__(self, other):
         """Method description (DocString)
-        return self.__value <= other.__value"""
-        return self.__value <= other.__value
+        return self.$VALUE_PRINCIPAL$ <= other.$VALUE_PRINCIPAL$"""
+        return self.$VALUE_PRINCIPAL$ <= other.$VALUE_PRINCIPAL$
 
     def __eq__(self, other):
         """Method description (DocString)
-        return self.__value == other.__value"""
-        return self.__value == other.__value
+        return self.$VALUE_PRINCIPAL$ == other.$VALUE_PRINCIPAL$"""
+        return self.$VALUE_PRINCIPAL$ == other.$VALUE_PRINCIPAL$
 
     # _____________________________Logical methods_____________________________
 
@@ -127,34 +142,34 @@ class Model(Cursor):
     # _________________________________Getters_________________________________
 
     @property
-    def value(self) -> int:
+    def $VALUE_PRINCIPAL$(self) -> $TYPE_VALUE_PRINCIPAL$:
         """Method description (DocString)"""
-        return self.__value
+        return self.__$VALUE_PRINCIPAL$
 
     @property
-    def secondary(self) -> float:
+    def $VALUE_SECONDARY$(self) -> $TYPE_VALUE_SECONDARY$:
         """Method description (DocString)"""
-        return self.__secondary
+        return self.__$VALUE_SECONDARY$
 
     # _________________________________Getters_________________________________
 
     # _________________________________Setters_________________________________
 
-    @value.setter
-    def value(self, value: int):
+    @$VALUE_PRINCIPAL$.setter
+    def $VALUE_PRINCIPAL$(self, $VALUE_PRINCIPAL$: $TYPE_VALUE_PRINCIPAL$):
         """Method description (DocString)"""
-        self.__value = value
+        self.__$VALUE_PRINCIPAL$ = $VALUE_PRINCIPAL$
 
-    @secondary.setter
-    def secondary(self, secondary: float):
+    @$VALUE_SECONDARY$.setter
+    def $VALUE_SECONDARY$(self, $VALUE_SECONDARY$: $TYPE_VALUE_SECONDARY$):
         """Method description (DocString)"""
-        self.__secondary = secondary
+        self.__$VALUE_SECONDARY$ = $VALUE_SECONDARY$
 
     # _________________________________Setters_________________________________
 
     # _____________________________Private methods_____________________________
 
-    def __private_method(self):
+    def __$METHOD_PRIVATE$(self) -> $TYPE_METHOD_PRIVATE_RETURN$:
         """Method description (DocString)
         >>> 2 + 3
         5
@@ -165,7 +180,7 @@ class Model(Cursor):
 
     # _____________________________Public methods______________________________
 
-    def public_method(self):
+    def $METHOD_PUBLIC$(self) -> $TYPE_METHOD_PUBLIC_RETURN$:
         """Method description (DocString)
         >>> 2 + 3
         5
@@ -176,7 +191,7 @@ class Model(Cursor):
 
     # ______________________________Inner classes______________________________
 
-    class ModelError(Exception):
+    class $NAME_CLASS$Error(Exception):
         def __init__(self, msg: str):
             super().__init__(msg)
 
