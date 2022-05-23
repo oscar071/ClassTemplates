@@ -1,0 +1,4 @@
+"""
+NAME_FILE: $NAME_FILE$, example -> worker
+Use the command nameProject>pyside2-uic uifrm/ui$NAME_FILE$.ui > view/ui$NAME_FILE$.py
+"""
