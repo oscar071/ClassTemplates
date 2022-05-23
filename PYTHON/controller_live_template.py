@@ -1,26 +1,31 @@
 # ________________________________Instructions_________________________________
 """
-01.- Create a file and name it as Ui_frms/ui_name.ui in Qt Designer
-02.- Rename the window object as Name in Qt Designer
-03.- Save the window icon image in the directory Imgs/...
-04.- Replace Imgs/icon.png with the image path
-05.- Replace Name with class Name (MatchCase)
-06.- Replace name with class name (MatchCase)
-07.- Use the command nameProject>pyside2-uic Ui_frms/ui_name.ui > Views/ui_name.py
-08.- Delete or replace public_method with method_name
-09.- Replace jan/01/2021 with date
-10.- Check all the class and delete this instructions
+                    VARIABLES
+DAY:                , example -> 01
+MONTH:              , example -> jan
+YEAR:               , example -> 2021
+CREDITS:            , example -> AvantZen
+NAME_FILE:          , example -> worker
+NAME_CLASS:         , example -> Worker
+PUBLIC_METHOD:      , example -> show_window
+PATH_ICON:          , example -> img/.png
+
+                    PROCESS:
+01.- Create a file and name it as uifrm/ui.ui in Qt Designer
+02.- Rename the window object as  in Qt Designer
+03.- Save the window icon image in the directory 
+04.- Use the command nameProject>pyside2-uic uifrm/ui.ui > view/ui.py
+05.- Check all the class and delete this instructions
 """
 # ________________________________Instructions_________________________________
-
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-from Config.app import App
+from config.app import App
 from PySide2.QtCore import *
 from PySide2.QtWidgets import QMainWindow, QMessageBox
 from PySide2.QtGui import QIcon
-from Views.ui_name import Ui_Name
+from view.ui import Ui_
 
 __email__ = "oscarmtzp93@gmail.com"
 __license__ = "GPL"
@@ -29,14 +34,14 @@ __status__ = "Developing"
 
 __version__ = "1.0"
 
-__date__ = "jan/01/2021"
+__date__ = "//"
 
 __author__ = "Oscar Martinez"
 
-__credits__ = "AvantZen"
+__credits__ = ""
 
 
-class ControllerName(QMainWindow):
+class Controller(QMainWindow):
     """Class description (DocString)"""
 
     # ______________________________MAGIC METHODS______________________________
@@ -45,12 +50,12 @@ class ControllerName(QMainWindow):
 
     def __init__(self, parent=None):
         """Method description  (DocString)"""
-        super(ControllerName, self).__init__(parent=parent)
+        super(Controller, self).__init__(parent=parent)
 
-        self.__setup = Ui_Name()
+        self.__setup = Ui_()
         self.__setup.setupUi(self)
         self.__design()
-        self.__listenEvents()
+        self.__listen_events()
 
     # _____________________________Generic methods_____________________________
 
@@ -60,12 +65,12 @@ class ControllerName(QMainWindow):
 
     def __design(self):
         """Create or modify the initial design of the form."""
-        icon = QIcon("Imgs/icon.png")
+        icon = QIcon("")
         self.setWindowIcon(icon)
 
-        self.setWindowTitle(QCoreApplication.translate("Name", App._text['name'], None))
+        self.setWindowTitle(QCoreApplication.translate("", App._text[''], None))
 
-    def __listenEvents(self):
+    def __listen_events(self):
         """Puts all the events of the form to listen."""
         # self.__setup.spn_origin_x.valueChanged.connect(self.public_method)
         #
@@ -93,7 +98,7 @@ class ControllerName(QMainWindow):
         box.setIcon(QMessageBox.Question)
         box.setWindowTitle(App._text['close_window'])
         box.setText(App._text['msg_close_window'])
-        box.setStandardButtons(QMessageBox.Yes|QMessageBox.No)
+        box.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
         btn_y = box.button(QMessageBox.Yes)
         btn_y.setText(App._text['yes'])
         btn_n = box.button(QMessageBox.No)
@@ -105,7 +110,7 @@ class ControllerName(QMainWindow):
         else:
             event.ignore()
 
-    def public_method(self):
+    def (self):
         """Method description (DocString)"""
         pass
 
