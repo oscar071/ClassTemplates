@@ -1,0 +1,9 @@
+@property
+def $NAME$(self) -> $TYPE$:
+    """Returns the $NAME$ ($TYPE$)"""
+    return self.__$NAME$
+
+@$NAME$.setter
+def $NAME$(self, $NAME$: $TYPE$):
+    """Sets the $NAME$ ($TYPE$)"""
+    self.__$NAME$ = $NAME$
