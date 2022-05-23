@@ -1,10 +1,10 @@
 # ________________________________Instructions_________________________________
 """
                     VARIABLES
-DAY:        , example -> 01
-MONTH:      , example -> jan
-YEAR:       , example -> 2021
-CREDITS:    , example -> AvantZen
+DAY:        $DAY$, example -> 01
+MONTH:      $MONTH$, example -> jan
+YEAR:       $YEAR$, example -> 2021
+CREDITS:    $CREDITS$, example -> AvantZen
 
                     PROCESS:
 01.- Check all the class and delete this instructions
@@ -20,11 +20,11 @@ __status__ = "Developing"
 
 __version__ = "1.0"
 
-__date__ = "//"
+__date__ = "$MONTH$/$DAY$/$YEAR$"
 
 __author__ = "Oscar Martinez"
 
-__credits__ = ""
+__credits__ = "$CREDITS$"
 
 
 class App:
