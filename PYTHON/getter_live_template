@@ -1,0 +1,4 @@
+@property
+def $NAME$(self) -> $TYPE$:
+    """Returns the $NAME$ ($TYPE$)"""
+    return self.__$NAME$
