@@ -1,20 +1,20 @@
 # ________________________________Instructions_________________________________
 """
                     VARIABLES
-DAY:                , example -> 01
-MONTH:              , example -> jan
-YEAR:               , example -> 2021
-CREDITS:            , example -> AvantZen
-NAME_FILE:          , example -> worker
-NAME_CLASS:         , example -> Worker
-PUBLIC_METHOD:      , example -> show_window
-PATH_ICON:          , example -> img/.png
+DAY:                $DAY$, example -> 01
+MONTH:              $MONTH$, example -> jan
+YEAR:               $YEAR$, example -> 2021
+CREDITS:            $CREDITS$, example -> AvantZen
+NAME_FILE:          $NAME_FILE$, example -> worker
+NAME_CLASS:         $NAME_CLASS$, example -> Worker
+PUBLIC_METHOD:      $PUBLIC_METHOD$, example -> show_window
+PATH_ICON:          $PATH_ICON$, example -> img/$NAME_FILE$.png
 
                     PROCESS:
-01.- Create a file and name it as uifrm/ui.ui in Qt Designer
-02.- Rename the window object as  in Qt Designer
-03.- Save the window icon image in the directory 
-04.- Use the command nameProject>pyside2-uic uifrm/ui.ui > view/ui.py
+01.- Create a file and name it as uifrm/ui$NAME_FILE$.ui in Qt Designer
+02.- Rename the window object as $NAME_CLASS$ in Qt Designer
+03.- Save the window icon image in the directory $PATH_ICON$
+04.- Use the command nameProject>pyside2-uic uifrm/ui$NAME_FILE$.ui > view/ui$NAME_FILE$.py
 05.- Check all the class and delete this instructions
 """
 # ________________________________Instructions_________________________________
@@ -25,7 +25,7 @@ from config.app import App
 from PySide2.QtCore import *
 from PySide2.QtWidgets import QMainWindow, QMessageBox
 from PySide2.QtGui import QIcon
-from view.ui import Ui_
+from view.ui$NAME_FILE$ import Ui_$NAME_CLASS$
 
 __email__ = "oscarmtzp93@gmail.com"
 __license__ = "GPL"
@@ -34,14 +34,14 @@ __status__ = "Developing"
 
 __version__ = "1.0"
 
-__date__ = "//"
+__date__ = "$MONTH$/$DAY$/$YEAR$"
 
 __author__ = "Oscar Martinez"
 
-__credits__ = ""
+__credits__ = "$CREDITS$"
 
 
-class Controller(QMainWindow):
+class Controller$NAME_CLASS$(QMainWindow):
     """Class description (DocString)"""
 
     # ______________________________MAGIC METHODS______________________________
@@ -50,9 +50,9 @@ class Controller(QMainWindow):
 
     def __init__(self, parent=None):
         """Method description  (DocString)"""
-        super(Controller, self).__init__(parent=parent)
+        super(Controller$NAME_CLASS$, self).__init__(parent=parent)
 
-        self.__setup = Ui_()
+        self.__setup = Ui_$NAME_CLASS$()
         self.__setup.setupUi(self)
         self.__design()
         self.__listen_events()
@@ -65,10 +65,10 @@ class Controller(QMainWindow):
 
     def __design(self):
         """Create or modify the initial design of the form."""
-        icon = QIcon("")
+        icon = QIcon("$PATH_ICON$")
         self.setWindowIcon(icon)
 
-        self.setWindowTitle(QCoreApplication.translate("", App._text[''], None))
+        self.setWindowTitle(QCoreApplication.translate("$NAME_CLASS$", App._text['$NAME_FILE$'], None))
 
     def __listen_events(self):
         """Puts all the events of the form to listen."""
@@ -110,8 +110,9 @@ class Controller(QMainWindow):
         else:
             event.ignore()
 
-    def (self):
+    def $PUBLIC_METHOD$(self):
         """Method description (DocString)"""
         pass
 
     # _____________________________Public methods______________________________
+
