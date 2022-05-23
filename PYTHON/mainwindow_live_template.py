@@ -1,28 +1,34 @@
 # ________________________________Instructions_________________________________
 """
-01.- Create a directory and name it Models
-02.- Create a directory and name it Views
-03.- Create a directory and name it Controllers
-04.- Create a directory and name it Config
-05.- Create a directory and name it Ui_frms
-06.- Create a directory and name it Imgs
-07.- Create a file and save it as Config/app.py
-08.- Execute the command app in app.py
-09.- Create a file and save it as Config/config.py
-10.- Execute the command config in config.py
-11.- Create a file and save it as Controller/controllerroot.py
-12.- Use the live template controller and name it ControllerRoot
-13.- Replace jan/01/2021 with date
-14.- Check all the class and delete this instructions
+                    VARIABLES
+DAY:        $DAY$, example -> 01
+MONTH:      $MONTH$, example -> jan
+YEAR:       $YEAR$, example -> 2021
+CREDITS:    $CREDITS$, example -> AvantZen
+
+                    PROCESS:
+01.- Create a Python package and name it model
+02.- Create a Python package and name it view
+03.- Create a Python package and name it controller
+04.- Create a Python package and name it config
+05.- Create a Python package and name it uifrm
+06.- Create a directory and name it img
+07.- Create a file and save it as config/app.py
+08.- Use the live template <app> in app.py
+09.- Create a file and save it as config/config.py
+10.- Use the live template <config> in config.py
+11.- Create a file and save it as controller/controllerroot.py
+12.- Use the live template <controller> and name it ControllerRoot
+13.- Check all the class and delete this instructions
 """
 # ________________________________Instructions_________________________________
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import sys
-from Config.config import run_config
+from config.config import run_config
 from PySide2.QtWidgets import QApplication
-from Controllers.controllerroot import ControllerRoot
+from controller.controllerroot import ControllerRoot
 
 __email__ = "oscarmtzp93@gmail.com"
 __license__ = "GPL"
@@ -44,3 +50,4 @@ if "__main__" == __name__:
     controller_root = ControllerRoot()
     controller_root.show()
     app.exec_()
+
