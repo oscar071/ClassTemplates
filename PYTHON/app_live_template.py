@@ -58,7 +58,7 @@ class App:
         """Set the app texts"""
         if App._lan == 'en':
             App._text = {
-                'roots': App._name,
+                'root': App._name,
                 'close_root': 'Close program',
                 'msg_close_root': 'Do you want to close the program?',
                 'yes': 'Yes',
@@ -69,7 +69,7 @@ class App:
 
         elif App._lan == 'es':
             App._text = {
-                'roots': App._name,
+                'root': App._name,
                 'close_root': 'Cerrar programa',
                 'msg_close_root': '¿Quiéres cerrar el programa?',
                 'yes': 'Si',
